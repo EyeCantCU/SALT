@@ -2140,6 +2140,10 @@ F_DOUSU(){ F_LOG "$FUNCNAME: started with this args: $@"
     DEVARBVAL=$(echo ${ARB}| cut -d ":" -f 1)
     DEVARBEMPT=$(echo ${ARB}| cut -d ":" -f 2)
 
+    # Discard ARB, force UsU
+    DEVARBVAL=0
+    DEVARBEMPT=0
+
     if [ $DEVARBEMPT -eq 0 ];then
         DEVARB=$DEVARBVAL
     else
